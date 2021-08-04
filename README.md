@@ -8,7 +8,7 @@ Codepad is a simple text editor built with Python and Qt.
 
 ## Installation
 
-Binaries are currently unavailable for Codepad. However, it is easy run Codepad from source.
+Binaries for Codepad are currently only available for macOS. However, it is to build Codepad from source.
 
 ### macOS or Linux
 
@@ -18,7 +18,7 @@ $ cd ./codepad/
 $ python3 -m venv ./venv/
 $ source ./venv/bin/activate
 $ pip3 install --requirement ./requirements.txt
-$ python3 -m codepad
+$ python3 ./build.py
 ```
 
 ### Windows
@@ -29,10 +29,10 @@ $ python3 -m codepad
 > py -3 -m venv .\venv\
 > .\venv\Scripts\Activate.ps1
 > py -3 -m pip install --requirement .\requirements.txt
-> py -3 -m codepad
+> py -3 ./build.py
 ```
 
-To run Codepad in the future, just use `cd` to go to the folder containing Codepad (command 2), activate the virtual enviromnent (command 4), and run Codepad (command 6).
+After the build script finishes, you should find the executable in the `dist` folder.
 
 ## Contributing
 
