@@ -1,9 +1,15 @@
+import platform
+from pathlib import Path
+
+from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication
 
 from codepad.window import Window
 
 
 class Application(QApplication):
+    _icon = str(Path(__file__).parent.parent / "resources" / "codepad.png")
+
     def __init__(self):
         super().__init__()
 
@@ -11,6 +17,9 @@ class Application(QApplication):
 
         if platform.system() == "Darwin":
             self.setQuitOnLastWindowClosed(False)
+
+        self.setWindowIcon(QIcon(Application._icon))
+
     def new(self):
         window = Window(self)
         window.show()
