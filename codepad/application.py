@@ -9,6 +9,8 @@ class Application(QApplication):
 
         self._windows = []
 
+        if platform.system() == "Darwin":
+            self.setQuitOnLastWindowClosed(False)
     def new(self):
         window = Window(self)
         window.show()
