@@ -7,6 +7,7 @@ class Window(QMainWindow):
         super().__init__()
 
         self._file = None
+        self._edited = False
         self._application = application
 
         font = QFontDatabase.systemFont(QFontDatabase.FixedFont)
@@ -79,6 +80,7 @@ class Window(QMainWindow):
                 self._application.close(self)
 
     def _modified(self):
+        self._edited = True
         self.setWindowModified(self._text.document().isModified())
 
     def _new(self):
@@ -88,7 +90,7 @@ class Window(QMainWindow):
         file, _ = QFileDialog.getOpenFileName(self)
 
         if file != "":
-            if self._file is None:
+            if not self._edited:
                 self.load(file)
             else:
                 self._application.open(file)
