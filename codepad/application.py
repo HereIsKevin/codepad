@@ -1,4 +1,3 @@
-import platform
 from pathlib import Path
 
 from PySide6.QtGui import QIcon
@@ -14,9 +13,6 @@ class Application(QApplication):
         super().__init__()
 
         self._windows = []
-
-        if platform.system() == "Darwin":
-            self.setQuitOnLastWindowClosed(False)
 
         self.setWindowIcon(QIcon(Application._icon))
 
