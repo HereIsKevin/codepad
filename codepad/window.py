@@ -122,23 +122,23 @@ class Window(QMainWindow):
             self,
             self.tr("Codepad"),
             self.tr(
-                "Copyright © 2021 Kevin Feng.<br /><br />"
-                "This program is free software: you can<br />"
-                "redistribute it and/or modify it under the<br />"
-                "terms of the GNU General Public License as<br />"
-                "published by the Free Software Foundation,<br />"
-                "either version 3 of the License, or (at your<br />"
-                "option) any later version.<br /><br />"
-                "This program is distributed in the hope that it<br />"
-                "will be useful, but WITHOUT ANY<br />"
-                "WARRANTY; without even the implied<br />"
-                "warranty of MERCHANTABILITY or FITNESS<br />"
-                "FOR A PARTICULAR PURPOSE. See the GNU<br />"
-                "General Public License for more details.<br /><br />"
-                "You should have received a copy of the GNU<br />"
-                "General Public License along with this program.<br />"
-                'If not, see <a href="https://www.gnu.org/licenses/">'
-                "https://www.gnu.org/licenses/</a>."
+                '<a href="https://github.com/HereIsKevin/codepad">Codepad</a>,'
+                + "the simple text editor built with Python and Qt. Copyright "
+                + "© 2021 Kevin Feng.<br /><br />"
+                + "This program is free software: you can redistribute it "
+                + "and/or modify it under the terms of the GNU General Public "
+                + "License as published by the Free Software Foundation, "
+                + "either version 3 of the License, or (at your option) any "
+                + "later version.<br /><br />"
+                + "This program is distributed in the hope that it will be "
+                + "useful, but WITHOUT ANY WARRANTY; without even the implied "
+                + "warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR "
+                + "PURPOSE. See the GNU General Public License for more "
+                + "details.<br /><br />"
+                + "You should have received a copy of the GNU General Public "
+                + "License along with this program. If not, see "
+                + '<a href="https://www.gnu.org/licenses/">'
+                + "https://www.gnu.org/licenses/</a>."
             ),
         )
 
