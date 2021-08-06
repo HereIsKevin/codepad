@@ -47,7 +47,7 @@ class Window(QMainWindow):
         try:
             with open(path) as file:
                 self._text.setPlainText(file.read())
-        except EnvironmentError as error:
+        except OSError as error:
             QMessageBox.warning(
                 self,
                 self.tr("Codepad"),
@@ -148,7 +148,7 @@ class Window(QMainWindow):
         try:
             with open(path, "w") as file:
                 file.write(self._text.toPlainText())
-        except EnvironmentError as error:
+        except OSError as error:
             QMessageBox.warning(
                 self,
                 self.tr("Codepad"),
