@@ -32,6 +32,11 @@ class Window(QMainWindow):
         edit_menu.addAction(self.tr("Cu&t"), self._text.cut, QKeySequence.Cut)
         edit_menu.addAction(self.tr("&Copy"), self._text.copy, QKeySequence.Copy)
         edit_menu.addAction(self.tr("&Paste"), self._text.paste, QKeySequence.Paste)
+        edit_menu.addAction(
+            self.tr("Select &All"),
+            self._text.selectAll,
+            QKeySequence.SelectAll,
+        )
 
         help_menu = self.menuBar().addMenu(self.tr("&Help"))
         help_menu.addAction(self.tr("Codepad &Help"), self._help)
