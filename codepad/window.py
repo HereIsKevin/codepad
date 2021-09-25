@@ -20,6 +20,7 @@ class Window(QMainWindow):
         file_menu = self.menuBar().addMenu(self.tr("&File"))
         file_menu.addAction(self.tr("&New"), self._new, QKeySequence.New)
         file_menu.addAction(self.tr("&Open..."), self._open, QKeySequence.Open)
+        file_menu.addSeparator()
         file_menu.addAction(self.tr("&Save"), self._save, QKeySequence.Save)
         file_menu.addAction(self.tr("Save &As..."), self._save_as, QKeySequence.SaveAs)
         file_menu.addSeparator()
