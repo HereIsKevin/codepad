@@ -18,5 +18,7 @@ subprocess.run(
         icon,
         "--add-data",
         f"./resources/codepad.png{os.path.pathsep}./resources/",
+        "--exclude-module",
+        "_bootlocale",
     ]
 )
